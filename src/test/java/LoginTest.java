@@ -1,6 +1,6 @@
-import com.optifast.base.BaseTest;
-import com.optifast.pages.AccountDashboardPageObject;
-import com.optifast.pages.LoginPageObject;
+import com.opt.base.BaseTest;
+import com.opt.pages.AccountDashboardPageObject;
+import com.opt.pages.LoginPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

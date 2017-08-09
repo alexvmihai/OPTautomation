@@ -1,4 +1,4 @@
-package com.optifast.base;
+package com.opt.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

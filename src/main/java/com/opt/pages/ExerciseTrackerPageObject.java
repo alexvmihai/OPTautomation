@@ -1,11 +1,9 @@
-package com.optifast.pages;
+package com.opt.pages;
 
-import com.optifast.base.BasePageObject;
-import org.apache.xpath.SourceTree;
+import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 /**
@@ -19,7 +17,8 @@ public class ExerciseTrackerPageObject extends BasePageObject<ExerciseTrackerPag
 //    private By when = By.xpath(".//*[@id='exerciseTrackerForm']/div/div[2]/div[2]/div/select");
     private By trackButton = By.xpath(".//*[@id='exerciseTrackerForm']/div/div[2]/div[3]/button");
     private By addCustomExercise = By.xpath(".//*[@id='exerciseTrackerForm']/span");
-    private JavascriptExecutor executor = (JavascriptExecutor)driver;
+    protected JavascriptExecutor executor = (JavascriptExecutor)driver;
+
 
     //Validation
 

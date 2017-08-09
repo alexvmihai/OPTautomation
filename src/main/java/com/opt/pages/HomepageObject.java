@@ -1,6 +1,6 @@
-package com.optifast.pages;
+package com.opt.pages;
 
-import com.optifast.base.BasePageObject;
+import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

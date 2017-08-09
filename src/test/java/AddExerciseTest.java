@@ -1,7 +1,6 @@
-import com.optifast.base.BaseTest;
-import com.optifast.pages.AccountDashboardPageObject;
-import com.optifast.pages.ExerciseTrackerPageObject;
-import org.apache.xpath.SourceTree;
+
+import com.opt.pages.AccountDashboardPageObject;
+import com.opt.pages.ExerciseTrackerPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

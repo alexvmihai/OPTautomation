@@ -1,5 +1,5 @@
-import com.optifast.base.BaseTest;
-import com.optifast.pages.HomepageObject;
+import com.opt.base.BaseTest;
+import com.opt.pages.HomepageObject;
 import org.testng.annotations.Test;
 
 /**

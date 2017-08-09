@@ -1,14 +1,13 @@
-package com.optifast.base;
+package com.opt.base;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 /**
  * Created by alex.mihai on 6/26/2017.
@@ -17,6 +16,7 @@ import java.util.Locale;
 public class BasePageObject<T> {
     protected WebDriver driver;
     protected WebDriverWait wait;
+
 
     protected BasePageObject(WebDriver driver){
         this.driver = driver;
@@ -93,8 +93,13 @@ public class BasePageObject<T> {
 
     public String getCurrentDate(){
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("EEEEEEEEEEE dd MMMMMMMM");
+        SimpleDateFormat formatter = new SimpleDateFormat("EEEEEEEEEEE d MMMMMMMM");
         return formatter.format(date);
+    }
+
+    public void mouseOver(WebElement element){
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
     }
 
 }
