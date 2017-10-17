@@ -2,6 +2,7 @@ package com.opt.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 /**
@@ -17,9 +18,9 @@ public class BaseTest {
         driver = new FirefoxDriver();
     }
 
-//    @AfterClass
-//    public void methodTearDown(){
-//        System.out.println("Test clean up !");
-//        driver.quit();
-//    }
+    @AfterClass
+    public void methodTearDown(){
+        System.out.println("Test clean up !");
+        driver.quit();
+    }
 }

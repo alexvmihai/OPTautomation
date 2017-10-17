@@ -9,7 +9,9 @@ import org.openqa.selenium.WebDriver;
  */
 public class HomepageObject extends BasePageObject<HomepageObject> {
     private String homePageURL ="https://optaros:opt1234@preprod.optifast.com.au/";
+    private String prodURL = "https://www.optifast.com.au/";
     private By optifastHeader = By.xpath("html/body/div[2]/div[1]/div/h1");
+    private By joinNow = By.cssSelector("a[title=\"Join Now\"]");
     public HomepageObject(WebDriver driver) {
         super(driver);
     }
@@ -17,7 +19,13 @@ public class HomepageObject extends BasePageObject<HomepageObject> {
     public void openHomePage(){
         getPage(homePageURL);
     }
+
     public void waitForHomepageToLoad(){
         waitForVisibilityOf(optifastHeader);
+    }
+
+    public RegisterPageObject clickJoinNow(){
+        clickOn(joinNow);
+        return new RegisterPageObject(driver);
     }
 }

@@ -1,5 +1,7 @@
 package com.opt.base;
 
+import org.apache.http.auth.Credentials;
+import org.apache.http.auth.UsernamePasswordCredentials;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -101,6 +103,10 @@ public class BasePageObject<T> {
         Actions builder = new Actions(driver);
         builder.moveToElement(element).perform();
     }
+
+
+
+
 
 }
 

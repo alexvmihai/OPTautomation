@@ -1,5 +1,6 @@
 import com.opt.pages.AccountDashboardPageObject;
 import com.opt.pages.MealTrackerPageObject;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
@@ -11,9 +12,13 @@ public class AddMealTodayTest extends LoginTest{
         AccountDashboardPageObject dashboardPage = new AccountDashboardPageObject(driver);
         MealTrackerPageObject mealTrackerPage = dashboardPage.openMealTracker();
         mealTrackerPage.waitForMealTrackerPageToLoad();
-        mealTrackerPage.typeMeal("Chicken Big Mac Burger");
+        mealTrackerPage.typeMeal("Big Mac Burger");
         mealTrackerPage.enterQTY("3");
         mealTrackerPage.selectMealTime("Lunch");
-//        mealTrackerPage.trackMeal();
+        mealTrackerPage.trackMeal();
+        String food = "Big Mac Burger";
+        String foodHistory = mealTrackerPage.getFoodHistory();
+        Assert.assertTrue(foodHistory.contains(food), "Error, the meal was not added to the Food History !");
+        System.out.println("Test passed ! The meal was added in the Food History !\n" + foodHistory );
     }
 }

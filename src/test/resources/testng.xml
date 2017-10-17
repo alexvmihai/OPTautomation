@@ -1,10 +1,43 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Smoke" verbose="1" >
+    <listeners>
+        <listener class-name="com.opt.base.TestListener"></listener>
+    </listeners>
     <test name="OpenHomepageTest" >
         <classes>
-            <class name="OpenHomepageTest" >
-            </class>
+            <class name="OpenHomepageTest" ></class>
             </classes>
+    </test>
+    <test name ="LoginTest>">
+        <classes>
+            <class name="LoginTest">
+            </class>
+        </classes>
+    </test>
+    <test name="AddExercisteTest">
+        <classes>
+            <class name="AddExerciseTest"></class>
+        </classes>
+    </test>
+    <test name="AddMealToday">
+        <classes>
+            <class name="AddMealTodayTest"></class>
+        </classes>
+    </test>
+    <test name="AddWaterToday">
+        <classes>
+            <class name="AddWaterTodayTest"></class>
+        </classes>
+    </test>
+    <test name="BERegisterTest">
+        <classes>
+            <class name="BERegisterTest"></class>
+        </classes>
+    </test>
+    <test name="RegisterTest">
+        <classes>
+            <class name="RegisterTest"></class>
+        </classes>
     </test>
 </suite>

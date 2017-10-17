@@ -14,6 +14,8 @@ public class LoginPageObject extends BasePageObject<LoginPageObject> {
     private By emailField = By.xpath(".//*[@id='email']");
     private By passwordField = By.xpath(".//*[@id='pass']");
     private By errorMsg = By.xpath("html/body/div[2]/div[2]/ul/li/ul/li/span");
+    private By successMsgNewAccount = By.cssSelector(".success-msg>ul>li>span");
+
     public LoginPageObject(WebDriver driver) {
         super(driver);
     }
@@ -35,11 +37,21 @@ public class LoginPageObject extends BasePageObject<LoginPageObject> {
         clickOn(loginButton);
         return new AccountDashboardPageObject(driver);
     }
+
+    public CreateProgramPageObject clickLoginButtonNewAccount(){
+        System.out.println("Clicking on login button...");
+        clickOn(loginButton);
+        return new CreateProgramPageObject(driver);
+    }
     public void waitForErrorMsgToLoad(){
         waitForVisibilityOf(errorMsg);
         System.out.println("Error msg visible !");
     }
     public String getErrorMessage(){
         return getText(errorMsg);
+    }
+
+    public String getSuccessMessageNewAccount(){
+        return getText(successMsgNewAccount);
     }
 }

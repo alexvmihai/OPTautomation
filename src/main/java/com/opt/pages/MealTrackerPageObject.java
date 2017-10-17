@@ -14,7 +14,7 @@ public class MealTrackerPageObject extends BasePageObject<MealTrackerPageObject>
     private By qty = By.xpath(".//*[@id='mealTrackerForm']/div[1]/div[2]/div[1]/div[1]/input");
     private By when = By.xpath(".//*[@id='mealTrackerForm']/div[1]/div[2]/div[2]/div/select");
     private By track = By.xpath(".//*[@id='addMealByTracker']");
-    private By foodHistory = By.xpath(".//*[@id='meal-tracker-history']");
+    private By foodHistory = By.xpath("html/body/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[3]/div");
     private By serving = By.xpath(".//*[@id='mealTrackerForm']/div[1]/div[2]/div[1]/div[2]/select");
     private By waterTracker = By.xpath(".//*[@id='water']");
     private By waterHistory = By.xpath(".//*[@id='water-history']/div/table/tbody/tr/td[1]");
@@ -70,6 +70,10 @@ public class MealTrackerPageObject extends BasePageObject<MealTrackerPageObject>
         System.out.println("Clicking on the track button...");
         clickOn(track);
         Thread.sleep(4000);
+    }
+
+    public String getFoodHistory(){
+        return getText(foodHistory);
     }
 
 

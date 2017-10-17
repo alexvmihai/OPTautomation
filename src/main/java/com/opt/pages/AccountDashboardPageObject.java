@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
  */
 public class AccountDashboardPageObject extends BasePageObject<AccountDashboardPageObject> {
     private By dashboardHeader = By.xpath("html/body/div[2]/div[1]/h1");
-    private String exerciseTrackerURL = "https://preprod.opt.com.au/member/exercise/#fndtn-exercise-tracker-tab";
+    private String exerciseTrackerURL = "https://preprod.optifast.com.au/member/exercise/#fndtn-exercise-tracker-tab";
 
     //Navbar
 
