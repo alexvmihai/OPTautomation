@@ -4,16 +4,18 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 10/2/2017.
  */
 public class BEHomePageObject extends BasePageObject<BEHomePageObject> {
-    private String url = "https://optaros:opt1234@preprod.optifast.com.au/back-office";
     private By userNameF = By.cssSelector("#username");
     private By passwordF = By.cssSelector("#login");
     private By loginButton = By.cssSelector(".form-button");
+    private String url = getURL("D:\\Access Credentials\\opt_url.txt", "url_admin");
 
-    public BEHomePageObject(WebDriver driver) {
+    public BEHomePageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

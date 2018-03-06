@@ -4,6 +4,7 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 /**
  * Created by alex.mihai on 6/26/2017.
@@ -11,6 +12,9 @@ import org.openqa.selenium.WebElement;
 public class AccountDashboardPageObject extends BasePageObject<AccountDashboardPageObject> {
     private By dashboardHeader = By.xpath("html/body/div[2]/div[1]/h1");
     private String exerciseTrackerURL = "https://preprod.optifast.com.au/member/exercise/#fndtn-exercise-tracker-tab";
+    private By weightProgress = By.xpath("html/body/div[2]/div[2]/div/div[1]");
+    private By calorieBreakdown = By.xpath("html/body/div[2]/div[2]/div/div[2]/div[1]");
+    private By dailyWater = By.xpath("html/body/div[2]/div[2]/div/div[2]/div[2]");
 
     //Navbar
 
@@ -18,6 +22,8 @@ public class AccountDashboardPageObject extends BasePageObject<AccountDashboardP
     private By mealTracker = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[2]/ul/li[2]/a");
     private By mealPreferences = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[2]/ul/li[3]/a");
     private By recipeInspiration = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[2]/ul/li[4]/a");
+    private By forum = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[5]/span");
+    private By communityForum = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[5]/ul/li[1]/a");
 
 
     public AccountDashboardPageObject(WebDriver driver) {
@@ -25,6 +31,9 @@ public class AccountDashboardPageObject extends BasePageObject<AccountDashboardP
     }
     public void waitForDashboardPageToLoad(){
         waitForVisibilityOf(dashboardHeader);
+        waitForVisibilityOf(weightProgress);
+        waitForVisibilityOf(calorieBreakdown);
+        waitForVisibilityOf(dailyWater);
         System.out.println("Dashboard Page Loaded !");
     }
     public ExerciseTrackerPageObject openExerciseTrackerPage(){
@@ -40,5 +49,7 @@ public class AccountDashboardPageObject extends BasePageObject<AccountDashboardP
         clickOn(mealTracker);
         return new MealTrackerPageObject(driver);
     }
+
+
 
 }

@@ -1,16 +1,19 @@
 import com.opt.base.BaseTest;
 import com.opt.pages.*;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 /**
  * Created by alex.mihai on 9/22/2017.
  */
 public class RegisterTest extends BaseTest{
-    private String preprodURL = "https://preprod.optifast.com.au/customer/account/create/";
 
-    @Test
-    public void RegisterTest() throws InterruptedException {
+
+    @Test (priority=1)
+    public void RegisterTest() throws InterruptedException, IOException {
         HomepageObject homepage = new HomepageObject(driver);
         homepage.openHomePage();
         homepage.acceptPrompt();
@@ -54,6 +57,7 @@ public class RegisterTest extends BaseTest{
         System.out.println("Your account is " + email + " Password: Parola123/");
 
         //Activate the account from the email
+        Thread.sleep(3000);
         MailinatorPageObject mailinator = new MailinatorPageObject(driver);
         mailinator.openMailinator();
         mailinator.waitForHomepageToLoad();
@@ -70,9 +74,17 @@ public class RegisterTest extends BaseTest{
         Assert.assertTrue(actualMessage.equals(expectedMessage), "Register message does not match ! \nExpected: " + expectedMessage + "\nActual: " + actualMessage);
         loginPage.fillInCredentials(email, "Parola123/");
         CreateProgramPageObject programPage = loginPage.clickLoginButtonNewAccount();
-        programPage.waitForPageToLoad();
-        System.out.println("Test passed ! Account created successfully !");
 
+        if(driver.getPageSource().contains("your password has expired")){
+            programPage.resetPass("Parola123/", "Parola1234/", "Parola1234/");
+            AccountDashboardPageObject dashboard = programPage.submitNewPass();
+            dashboard.waitForDashboardPageToLoad();
+            System.out.println("Password has been reset, dashboard loaded successfully ! \nNew password is: Parola1234/");
+
+        } else {
+            programPage.waitForPageToLoad();
+            System.out.println("Test passed ! Account created successfully !");
+        }
 
     }
 }

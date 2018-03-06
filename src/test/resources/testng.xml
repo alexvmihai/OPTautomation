@@ -40,4 +40,33 @@
             <class name="RegisterTest"></class>
         </classes>
     </test>
+    <test name="CreateForumPostTest">
+        <classes>
+            <class name="CreateForumPostTest"></class>
+        </classes>
+    </test>
+    <test name="RegisterUsedEmailTest">
+        <classes>
+            <class name="RegisterUsedEmailTest">
+            </class>
+        </classes>
+    </test>
+    <test name="TermsAndConditionsTest">
+        <classes>
+            <class name="TermsAndConditionsTest">
+            </class>
+        </classes>
+    </test>
+    <test name="CreateProgramTest">
+        <classes>
+            <class name="CreateProgramTest">
+            </class>
+        </classes>
+    </test>
+    <test name="HCPRegister Test">
+        <classes>
+            <class name="HCPRegisterTest">
+            </class>
+        </classes>
+    </test>
 </suite>

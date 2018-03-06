@@ -25,7 +25,8 @@ public class RegisterConfirmationPageObject extends BasePageObject<RegisterConfi
         return getText(confirmationMsg);
     }
 
-    public void waitForConfirmationPage(){
+    public void waitForConfirmationPage() throws InterruptedException{
+        Thread.sleep(5000);
         waitForVisibilityOf(header);
     }
 

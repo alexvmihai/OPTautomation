@@ -4,19 +4,22 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 10/10/2017.
  */
 public class BEManageCustomersPageObject extends BasePageObject<BEManageCustomersPageObject> {
-    private By addCustomer = By.xpath("html/body/div[1]/div[4]/div/div[2]/table/tbody/tr/td[2]/button");
-    private By header = By.xpath("html/body/div[1]/div[4]/div/div[2]/table/tbody/tr/td[1]/h3");
+    private By addCustomer = By.cssSelector("button[title=\"Add New Customer\"]");
+    private By header = By.cssSelector(".icon-head.head-customer");
+    private By successMsg = By.cssSelector(".success-msg>ul>li>span");
 
     public void waitForPageToLoad(){
         waitForVisibilityOf(addCustomer);
         waitForVisibilityOf(header);
     }
 
-    public BECustomerInfoPageObject addCustomer(){
+    public BECustomerInfoPageObject addCustomer() throws IOException {
         System.out.println("Clicking on \"Add New Customer\"");
         clickOn(addCustomer);
         return new BECustomerInfoPageObject(driver);
@@ -24,5 +27,9 @@ public class BEManageCustomersPageObject extends BasePageObject<BEManageCustomer
 
     protected BEManageCustomersPageObject(WebDriver driver) {
         super(driver);
+    }
+
+    public String getSuccessMsg(){
+        return getText(successMsg);
     }
 }

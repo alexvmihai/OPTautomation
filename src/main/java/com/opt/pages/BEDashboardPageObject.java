@@ -11,16 +11,18 @@ import org.openqa.selenium.interactions.Actions;
  */
 public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject> {
     private By header = By.cssSelector(".head-dashboard");
-    private By popUp = By.xpath("html/body/div[1]/div[5]/div[1]/a/span");
+    private By popUp = By.cssSelector(".message-popup-head > a:nth-child(1) > span:nth-child(1)");
     private By customers = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[4]/a/span");
     private By manageCustomers = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[4]/ul/li[1]/a/span");
+    private By HCPRegistrationRequests = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/ul/li[7]/ul/li/a/span");
 
 
     protected BEDashboardPageObject(WebDriver driver) {
         super(driver);
     }
 
-    public void closePopUp() {
+    public void closePopUp() throws InterruptedException {
+        Thread.sleep(4000);
         clickOn(popUp);
     }
 
@@ -47,4 +49,23 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
         clickOn(manageCustomers);
         return new BEManageCustomersPageObject(driver);
     }
+
+    public void mouseOverEwave(){
+        WebElement element = driver.findElement(By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/a/span"));
+        Actions action = new Actions(driver);
+        action.moveToElement(element).build().perform();
+    }
+
+    public void mouseOverHCP(){
+        WebElement element = driver.findElement(By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/ul/li[7]/a/span"));
+        Actions action = new Actions(driver);
+        action.moveToElement(element).build().perform();
+    }
+
+    public HCPRegistrationRequestsPageObject clickHCPRequests(){
+        clickOn(HCPRegistrationRequests);
+        return new HCPRegistrationRequestsPageObject(driver);
+    }
+
+
 }

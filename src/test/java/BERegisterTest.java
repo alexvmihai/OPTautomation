@@ -3,17 +3,21 @@ import com.opt.pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.util.Arrays;
+
 /**
  * Created by alex.mihai on 10/2/2017.
  */
 public class BERegisterTest extends BaseTest {
     @Test
-    public void BERegisterTest() throws InterruptedException {
+    public void BERegisterTest() throws InterruptedException, IOException {
         BEHomePageObject homepage = new BEHomePageObject(driver);
         homepage.openHomepage();
         homepage.acceptPrompt();
         homepage.waitForPageToLoad();
-        homepage.fillCredentials("optaros", "OptarosAdmin!123456%#$^&");
+        String[] credentials = homepage.getCredentials("D:\\Access Credentials\\opt.txt");
+        homepage.fillCredentials(credentials[0], credentials[1]);
         BEDashboardPageObject dashboard = homepage.clickLogin();
         dashboard.waitForPageToLoad();
         dashboard.closePopUp();
@@ -40,7 +44,7 @@ public class BERegisterTest extends BaseTest {
         customerInfoPage.clickAddresses();
         customerInfoPage.clickDefaultBilling();
         customerInfoPage.fillAddress("Optaros", "Automated", "Street 20", "Sidney","Australia", "New South Wales", "2302", phone);
-        BECustomerEditPageObject customerEditPage = customerInfoPage.saveCustomer();
+        BEManageCustomersPageObject customerEditPage = customerInfoPage.saveCustomer();
         customerEditPage.waitForPageToLoad();
         String successMSG = customerEditPage.getSuccessMsg();
         String expectedSuccessMSG = "The customer has been saved.";

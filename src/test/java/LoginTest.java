@@ -4,28 +4,30 @@ import com.opt.pages.LoginPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 6/26/2017.
  */
 public class LoginTest extends BaseTest {
-    private String email = "smoke_test_preprod@mailinator.com";
-    private String password ="Smoketest123/";
     private String wrongEmail = "wrong@email.com";
     private String wrongPassword = "wrongPass";
-    private String expectedErrorMsg = "The entered email address and password do not match our records. Please check your details and try again.";
+    private String expectedErrorMsg = "Login failed. Please check your details and try again.";
     @Test(priority=2)
-    public void positiveLoginTest() throws InterruptedException {
+    public void positiveLoginTest() throws InterruptedException, IOException {
         LoginPageObject loginPage = new LoginPageObject(driver);
         loginPage.openLoginPage();
         loginPage.acceptPrompt();
         loginPage.waitForLoginPageToLoad();
-        loginPage.fillInCredentials(email, password);
+        String[] credentials = loginPage.getCredentials("D:\\Access Credentials\\opt_login.txt");
+        System.out.println(credentials);
+        loginPage.fillInCredentials(credentials[0], credentials[1]);
         AccountDashboardPageObject dashboardPage = loginPage.clickLoginButton();
         dashboardPage.waitForDashboardPageToLoad();
         System.out.println("Test Passed !");
     }
     @Test (priority=1)
-    public void negativeLoginTest() throws InterruptedException {
+    public void negativeLoginTest() throws InterruptedException, IOException {
         LoginPageObject loginPage = new LoginPageObject(driver);
         loginPage.openLoginPage();
         loginPage.acceptPrompt();

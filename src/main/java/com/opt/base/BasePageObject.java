@@ -1,15 +1,22 @@
 package com.opt.base;
 
-import org.apache.http.auth.Credentials;
-import org.apache.http.auth.UsernamePasswordCredentials;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Properties;
+import java.util.TimeZone;
 
 /**
  * Created by alex.mihai on 6/26/2017.
@@ -96,6 +103,7 @@ public class BasePageObject<T> {
     public String getCurrentDate(){
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("EEEEEEEEEEE d MMMMMMMM");
+        formatter.setTimeZone(TimeZone.getTimeZone("Australia/Sydney"));
         return formatter.format(date);
     }
 
@@ -103,6 +111,24 @@ public class BasePageObject<T> {
         Actions builder = new Actions(driver);
         builder.moveToElement(element).perform();
     }
+
+    public String[] getCredentials(String path) throws IOException {
+        Properties properties = new Properties();
+        properties.load(new FileInputStream(path));
+        String userName = properties.getProperty("username");
+        String password = properties.getProperty("password");
+        String[] credentials ={userName, password};
+        return credentials;
+    }
+
+    public String getURL(String path, String name) throws IOException{
+        Properties properties = new Properties();
+        properties.load(new FileInputStream(path));
+        String url = properties.getProperty(name);
+        return url;
+    }
+
+
 
 
 

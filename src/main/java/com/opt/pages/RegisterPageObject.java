@@ -27,6 +27,7 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
     private By completeF = By.cssSelector("button[id=\"onestepcheckout-place-order\"]");
     private By leftBlock1F = By.cssSelector(".login-introduction");
     private By leftBlock2F = By.cssSelector(".account-box.-list.-faqs");
+    private By duplicateMail = By.xpath("html/body/div[2]/div[2]/div[2]/div/form/div/div/div[1]/div/ul/li[3]/div[1]/div");
 
 
     protected RegisterPageObject(WebDriver driver) {
@@ -74,6 +75,12 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
         clickOn(completeF);
         return new RegisterConfirmationPageObject(driver);
     }
+
+    public String getDuplicateEmailMsg(){
+        return getText(duplicateMail);
+    }
+
+
 
 
 
