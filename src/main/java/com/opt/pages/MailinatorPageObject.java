@@ -19,7 +19,7 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
 
 
 
-    public MailinatorPageObject(WebDriver driver) {
+    public MailinatorPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -42,7 +42,9 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
         System.out.println("Clicking on Go ....");
         clickOn(goButton);
         Thread.sleep(6000);
-        driver.switchTo().alert().accept();
+        if (isAlertPresent()) {
+            driver.switchTo().alert().accept();
+        }
         Thread.sleep(3000);
     }
 
@@ -58,7 +60,7 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
         return new LoginPageObject(driver);
     }
 
-    public ResetPasswordPageObject resetPass() throws InterruptedException {
+    public ResetPasswordPageObject resetPass() throws InterruptedException, IOException {
         clickOn(activateMail);
         Thread.sleep(4000);
         driver.switchTo().frame("msg_body");

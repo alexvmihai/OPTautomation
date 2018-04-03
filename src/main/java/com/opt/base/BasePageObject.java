@@ -22,12 +22,12 @@ import java.util.TimeZone;
  * Created by alex.mihai on 6/26/2017.
  */
 
-public class BasePageObject<T> {
+public class BasePageObject<T> extends BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
 
-    protected BasePageObject(WebDriver driver){
+    protected BasePageObject(WebDriver driver) throws IOException {
         this.driver = driver;
         wait = new WebDriverWait(driver, 20);
     }
@@ -112,13 +112,25 @@ public class BasePageObject<T> {
         builder.moveToElement(element).perform();
     }
 
-    public String[] getCredentials(String path) throws IOException {
-        Properties properties = new Properties();
-        properties.load(new FileInputStream(path));
-        String userName = properties.getProperty("username");
-        String password = properties.getProperty("password");
-        String[] credentials ={userName, password};
-        return credentials;
+    public String[] getCredentials(String filePath) throws IOException {
+        if (setEnv() == "PPRD"){
+            Properties properties = new Properties();
+            properties.load(new FileInputStream(filePath));
+            String userName = properties.getProperty("username_pprd");
+            String password = properties.getProperty("password_pprd");
+            String[] credentials ={userName, password};
+            return credentials;
+        } else if (setEnv() == "PROD"){
+            Properties properties = new Properties();
+            properties.load(new FileInputStream(filePath));
+            String userName = properties.getProperty("username_prod");
+            String password = properties.getProperty("password_prod");
+            System.out.println("PROD !!!!");
+            String[] credentials ={userName, password};
+            return credentials;
+        }else{
+            return null;
+        }
     }
 
     public String getURL(String path, String name) throws IOException{
@@ -127,6 +139,27 @@ public class BasePageObject<T> {
         String url = properties.getProperty(name);
         return url;
     }
+
+    public String BaseURL() throws IOException {
+        if(setEnv()== "PPRD"){
+            return getURL("D:\\Access Credentials\\opt_url.txt", "url_preprod");
+        } else if (setEnv() == "PROD"){
+            return getURL("D:\\Access Credentials\\opt_url.txt", "url_prod");
+        } else {
+            return null;
+        }
+    }
+
+    public String AdminURL() throws IOException{
+        if(setEnv()== "PPRD"){
+            return getURL("D:\\Access Credentials\\opt_url.txt", "url_admin_preprod");
+        } else if (setEnv() == "PROD"){
+            return getURL("D:\\Access Credentials\\opt_url.txt", "url_admin_prod");
+        } else {
+            return null;
+        }
+    }
+
 
 
 

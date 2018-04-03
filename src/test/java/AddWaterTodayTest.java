@@ -3,12 +3,14 @@ import com.opt.pages.MealTrackerPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 6/28/2017.
  */
 public class AddWaterTodayTest extends LoginTest {
     @Test (priority=3)
-    public void AddWaterTest() throws InterruptedException{
+    public void AddWaterTest() throws InterruptedException, IOException {
         AccountDashboardPageObject dashboardPage = new AccountDashboardPageObject(driver);
         MealTrackerPageObject mealTrackerPage = dashboardPage.openMealTracker();
         mealTrackerPage.waitForMealTrackerPageToLoad();

@@ -99,7 +99,7 @@ public class BECustomerInfoPageObject extends BasePageObject<BECustomerInfoPageO
         type(telephone, telephoneF);
     }
 
-    public BEManageCustomersPageObject saveCustomer (){
+    public BEManageCustomersPageObject saveCustomer () throws IOException {
         System.out.println("Saving customer ...");
         clickOn(saveCustomer);
         return new BEManageCustomersPageObject(driver);

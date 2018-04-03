@@ -6,6 +6,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 6/27/2017.
  */
@@ -28,7 +30,7 @@ public class ExerciseTrackerPageObject extends BasePageObject<ExerciseTrackerPag
     private By duration = By.xpath(".//*[@id='exercise-history']/table/tbody/tr[1]/td[4]");
 
 
-    protected ExerciseTrackerPageObject(WebDriver driver) {
+    protected ExerciseTrackerPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

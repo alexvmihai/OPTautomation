@@ -4,6 +4,8 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 10/17/2017.
  */
@@ -25,7 +27,7 @@ public class ForumPageObject extends BasePageObject<ForumPageObject> {
     private By postHeader = By.xpath("html/body/div[2]/div[2]/div[2]/div[2]/h4");
 
 
-    protected ForumPageObject(WebDriver driver) {
+    protected ForumPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

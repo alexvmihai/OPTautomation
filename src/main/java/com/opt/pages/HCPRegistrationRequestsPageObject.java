@@ -4,6 +4,8 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 1/9/2018.
  */
@@ -13,7 +15,7 @@ public class HCPRegistrationRequestsPageObject extends BasePageObject<HCPRegistr
     private By searchButton = By.cssSelector("button[title=\"Search\"]");
     private By message = By.cssSelector(".success-msg>ul>li>span");
 
-    protected HCPRegistrationRequestsPageObject(WebDriver driver) {
+    protected HCPRegistrationRequestsPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

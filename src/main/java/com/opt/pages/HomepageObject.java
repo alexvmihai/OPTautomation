@@ -14,9 +14,10 @@ public class HomepageObject extends BasePageObject<HomepageObject> {
     private By optifastHeader = By.xpath("html/body/div[2]/div[1]/div/h1");
     private By joinNow = By.cssSelector("a[title=\"Join Now\"]");
     private By termsAndConditions = By.xpath("html/body/div[2]/footer/div[1]/ul/li[2]/a[2]");
-    private String url = getURL("D:\\Access Credentials\\opt_url.txt", "url");
+    private String url = BaseURL();
     private By HCP = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[4]/a");
     private By HCPRegister = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[4]/ul/li[6]/a");
+    private By loginButton = By.cssSelector(".user-login > a:nth-child(1)");
 
     public HomepageObject(WebDriver driver) throws IOException {
         super(driver);
@@ -31,21 +32,26 @@ public class HomepageObject extends BasePageObject<HomepageObject> {
         waitForVisibilityOf(optifastHeader);
     }
 
-    public RegisterPageObject clickJoinNow(){
+    public RegisterPageObject clickJoinNow() throws IOException {
         clickOn(joinNow);
         return new RegisterPageObject(driver);
     }
 
-    public TermsAndConditionsPageObject openTermsAndConditions(){
+    public TermsAndConditionsPageObject openTermsAndConditions() throws IOException {
         System.out.println("Clicking on terms and conditions....");
         clickOn(termsAndConditions);
         return new TermsAndConditionsPageObject(driver);
     }
 
-    public HCPRegisterPageObject openHCPRegisterPage() throws InterruptedException {
+    public HCPRegisterPageObject openHCPRegisterPage() throws InterruptedException, IOException {
         mouseOver(driver.findElement(By.xpath("html/body/div[2]/header/div[2]/div/ul/li[4]/a")));
         Thread.sleep(3000);
         clickOn(HCPRegister);
         return new HCPRegisterPageObject(driver);
+    }
+
+    public LoginPageObject openLogin() throws IOException {
+        clickOn(loginButton);
+        return new LoginPageObject(driver);
     }
 }

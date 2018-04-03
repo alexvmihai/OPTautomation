@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -39,7 +40,7 @@ public class TermsAndConditionsPageObject extends BasePageObject<TermsAndConditi
     By[] arrayEngagementElem = {engagementP14, engagementP1, engagementP2, engagementP3, engagementP4, engagementP5, engagementP6, engagementP7,
                                 engagementP8, engagementP9, engagementP10, engagementP11, engagementP12, engagementP13};
 
-    protected TermsAndConditionsPageObject(WebDriver driver) {
+    protected TermsAndConditionsPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

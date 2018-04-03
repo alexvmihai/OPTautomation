@@ -20,7 +20,7 @@ public class ResetPasswordPageObject extends BasePageObject<ResetPasswordPageObj
 
 
 
-    protected ResetPasswordPageObject(WebDriver driver) {
+    protected ResetPasswordPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

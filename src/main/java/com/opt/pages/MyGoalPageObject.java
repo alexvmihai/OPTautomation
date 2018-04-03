@@ -4,6 +4,8 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 11/8/2017.
  */
@@ -17,7 +19,7 @@ public class MyGoalPageObject extends BasePageObject<MyGoalPageObject> {
     private By generateProgram = By.xpath("html/body/div[2]/div[2]/div/div/div[2]/form/div[3]/button[3]");
     private By backButton = By.xpath("html/body/div[2]/div[2]/div/div/div[2]/form/div[3]/button[1]");
 
-    protected MyGoalPageObject(WebDriver driver) {
+    protected MyGoalPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -43,7 +45,7 @@ public class MyGoalPageObject extends BasePageObject<MyGoalPageObject> {
         return getText(goalBMI);
     }
 
-    public SelectMyProgramPageObject generateProgram (){
+    public SelectMyProgramPageObject generateProgram () throws IOException {
         System.out.println("Generating program...");
         clickOn(generateProgram);
         return new SelectMyProgramPageObject(driver);

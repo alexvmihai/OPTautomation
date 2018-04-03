@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -16,7 +17,7 @@ public class CreateProgramTest extends RegisterTest{
     private By manageProgram = By.cssSelector("li.menu-item:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1)");
 
     @Test (priority=2)
-    public void CreateProgramTest() throws InterruptedException {
+    public void CreateProgramTest() throws InterruptedException, IOException {
         if(driver.getPageSource().contains("My Dashboard")){
             WebElement exercise = driver.findElement(By.cssSelector("li.menu-item:nth-child(1) > span:nth-child(1)"));
             Actions mouseover = new Actions(driver);

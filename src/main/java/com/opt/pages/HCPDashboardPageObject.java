@@ -4,6 +4,8 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 1/9/2018.
  */
@@ -13,7 +15,7 @@ public class HCPDashboardPageObject extends BasePageObject<HCPDashboardPageObjec
     private By addPatientButton = By.cssSelector(".button.-secondary");
     private By managePatients = By.cssSelector(".button");
 
-    protected HCPDashboardPageObject(WebDriver driver) {
+    protected HCPDashboardPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

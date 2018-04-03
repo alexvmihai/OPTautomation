@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 /**
  * Created by alex.mihai on 6/26/2017.
  */
-public class BaseTest {
+public class BaseTest  {
     protected WebDriver driver;
 
     @BeforeClass
@@ -16,6 +16,12 @@ public class BaseTest {
         System.out.println("Test set up !");
         System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver.exe");
         driver = new FirefoxDriver();
+    }
+
+    @BeforeClass
+    public String setEnv(){
+        String env = "PROD";
+        return env;
     }
 
     @AfterClass

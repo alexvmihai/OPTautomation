@@ -48,6 +48,7 @@ public class BERegisterTest extends BaseTest {
         customerEditPage.waitForPageToLoad();
         String successMSG = customerEditPage.getSuccessMsg();
         String expectedSuccessMSG = "The customer has been saved.";
+        System.out.println("The account is: " + email + " pass: Optifast123/");
         Assert.assertTrue(successMSG.equals(expectedSuccessMSG), "Success messages do not match !" + "\nExpected: " + expectedSuccessMSG + "\nActual: " + successMSG);
         System.out.println("Customer saved successfully ! \nExpected: " + expectedSuccessMSG + "\nActual: " + successMSG);
 

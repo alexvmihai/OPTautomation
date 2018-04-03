@@ -13,7 +13,7 @@ public class BEHomePageObject extends BasePageObject<BEHomePageObject> {
     private By userNameF = By.cssSelector("#username");
     private By passwordF = By.cssSelector("#login");
     private By loginButton = By.cssSelector(".form-button");
-    private String url = getURL("D:\\Access Credentials\\opt_url.txt", "url_admin");
+    private String url = AdminURL();
 
     public BEHomePageObject(WebDriver driver) throws IOException {
         super(driver);
@@ -34,7 +34,7 @@ public class BEHomePageObject extends BasePageObject<BEHomePageObject> {
         type(password, passwordF);
     }
 
-    public BEDashboardPageObject clickLogin(){
+    public BEDashboardPageObject clickLogin() throws IOException {
         clickOn(loginButton);
         return new BEDashboardPageObject(driver);
     }

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 10/2/2017.
  */
@@ -17,7 +19,7 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
     private By HCPRegistrationRequests = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/ul/li[7]/ul/li/a/span");
 
 
-    protected BEDashboardPageObject(WebDriver driver) {
+    protected BEDashboardPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -43,7 +45,7 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
         action.moveToElement(element).build().perform();
     }
 
-    public BEManageCustomersPageObject clickManage() throws InterruptedException {
+    public BEManageCustomersPageObject clickManage() throws InterruptedException, IOException {
         System.out.println("Clicking on Manage Customers...");
         Thread.sleep(5000);
         clickOn(manageCustomers);
@@ -62,7 +64,7 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
         action.moveToElement(element).build().perform();
     }
 
-    public HCPRegistrationRequestsPageObject clickHCPRequests(){
+    public HCPRegistrationRequestsPageObject clickHCPRequests() throws IOException {
         clickOn(HCPRegistrationRequests);
         return new HCPRegistrationRequestsPageObject(driver);
     }

@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 11/8/2017.
  */
@@ -29,7 +31,7 @@ public class AboutMePageObject extends BasePageObject<AboutMePageObject> {
     private By precautionButton = By.xpath("html/body/div[8]/div[2]/div/button[2]");
 
 
-    public AboutMePageObject(WebDriver driver) {
+    public AboutMePageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -73,7 +75,7 @@ public class AboutMePageObject extends BasePageObject<AboutMePageObject> {
         Thread.sleep(5000);
     }
 
-    public MyGoalPageObject acceptRecommendation() throws InterruptedException {
+    public MyGoalPageObject acceptRecommendation() throws InterruptedException, IOException {
         System.out.println("Accepting recommendation...");
         clickOn(proceedButton);
         Thread.sleep(4000);

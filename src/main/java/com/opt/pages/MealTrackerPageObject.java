@@ -6,6 +6,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 6/28/2017.
  */
@@ -22,7 +24,7 @@ public class MealTrackerPageObject extends BasePageObject<MealTrackerPageObject>
     private By deleteWaterHistory = By.xpath(".//*[@class=\"remove js-delete-water\"]");
     protected JavascriptExecutor executor = (JavascriptExecutor)driver;
 
-    protected MealTrackerPageObject(WebDriver driver) {
+    protected MealTrackerPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

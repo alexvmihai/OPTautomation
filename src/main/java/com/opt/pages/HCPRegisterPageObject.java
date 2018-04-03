@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 1/8/2018.
  */
@@ -29,7 +31,7 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
 
 
 
-    public HCPRegisterPageObject (WebDriver driver){
+    public HCPRegisterPageObject (WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -72,7 +74,7 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
         clickOn(agreementF);
     }
 
-    public HCPConfirmationPage submitForm(){
+    public HCPConfirmationPage submitForm() throws IOException {
         clickOn(registerButtonF);
         return new HCPConfirmationPage(driver);
     }

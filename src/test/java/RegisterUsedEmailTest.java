@@ -19,8 +19,15 @@ public class RegisterUsedEmailTest extends BaseTest{
         RegisterPageObject registerPage = homepage.clickJoinNow();
         registerPage.waitForRegisterPageToLoad();
         String duplicateMail = "alex_optifast3@mailinator.com";
-        registerPage.fillRegisterForm("Alex", "alex", duplicateMail, "Street 10", "Sidney", "2092", "Opifast123/", "Optifast123/",
-                "New South Wales", "20", "May", "1988");
+        String duplicateMailProd = "alex_optifast2208@mailinator.com";
+        if (setEnv() == "PPRD"){
+            registerPage.fillRegisterForm("Alex", "alex", duplicateMail, "Street 10", "Sidney", "2092", "Opifast123/", "Optifast123/",
+                    "Australia","New South Wales", "20", "May", "1988");
+        } else if (setEnv() == "PROD"){
+            registerPage.fillRegisterForm("Alex", "alex", duplicateMailProd, "Street 10", "Sidney", "2092", "Opifast123/", "Optifast123/",
+                     "Australia", "New South Wales", "20", "May", "1988");
+        }
+
         Thread.sleep(5000);
         registerPage.agreeTerms();
         String expectedMsg = "Email address already registered. Please login now or use a different email address.";

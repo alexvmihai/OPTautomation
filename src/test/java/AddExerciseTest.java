@@ -4,12 +4,14 @@ import com.opt.pages.ExerciseTrackerPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 6/26/2017.
  */
 public class AddExerciseTest extends LoginTest {
     @Test (priority = 3)
-    public void AddExerciseTest() throws InterruptedException {
+    public void AddExerciseTest() throws InterruptedException, IOException {
         AccountDashboardPageObject dashboardPage = new AccountDashboardPageObject(driver);
         ExerciseTrackerPageObject exerciseTrackerPage = dashboardPage.openExerciseTrackerPage();
         exerciseTrackerPage.waitForExerciseTrackerPageToLoad();

@@ -4,6 +4,8 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 10/2/2017.
  */
@@ -13,7 +15,7 @@ public class RegisterConfirmationPageObject extends BasePageObject<RegisterConfi
     private By successBlock = By.cssSelector(".success-content");
     private By header = By.cssSelector("h1");
 
-    protected RegisterConfirmationPageObject(WebDriver driver) {
+    protected RegisterConfirmationPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

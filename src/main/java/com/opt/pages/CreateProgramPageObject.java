@@ -4,6 +4,8 @@ import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 /**
  * Created by alex.mihai on 10/2/2017.
  */
@@ -18,7 +20,7 @@ public class CreateProgramPageObject extends BasePageObject<CreateProgramPageObj
     private By submitPass = By.cssSelector(".-arrow");
 
 
-    protected CreateProgramPageObject(WebDriver driver) {
+    protected CreateProgramPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -34,7 +36,7 @@ public class CreateProgramPageObject extends BasePageObject<CreateProgramPageObj
         type(confirm, confirmPassF);
     }
 
-    public AccountDashboardPageObject submitNewPass() throws InterruptedException {
+    public AccountDashboardPageObject submitNewPass() throws InterruptedException, IOException {
         clickOn(submitPass);
         Thread.sleep(7000);
         return new AccountDashboardPageObject(driver);

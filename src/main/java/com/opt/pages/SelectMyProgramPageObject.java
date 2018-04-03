@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class SelectMyProgramPageObject extends BasePageObject<SelectMyProgramPag
 
 
 
-    protected SelectMyProgramPageObject(WebDriver driver) {
+    protected SelectMyProgramPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 
@@ -133,7 +134,7 @@ public class SelectMyProgramPageObject extends BasePageObject<SelectMyProgramPag
         return parsed;
     }
 
-    public MyPreferencesPageObject setPreferences(){
+    public MyPreferencesPageObject setPreferences() throws IOException {
         System.out.println("Setting preferences...");
         clickOn(setPreferences);
         return new MyPreferencesPageObject(driver);

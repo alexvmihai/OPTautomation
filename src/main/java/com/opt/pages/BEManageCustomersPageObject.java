@@ -25,7 +25,7 @@ public class BEManageCustomersPageObject extends BasePageObject<BEManageCustomer
         return new BECustomerInfoPageObject(driver);
     }
 
-    protected BEManageCustomersPageObject(WebDriver driver) {
+    protected BEManageCustomersPageObject(WebDriver driver) throws IOException {
         super(driver);
     }
 

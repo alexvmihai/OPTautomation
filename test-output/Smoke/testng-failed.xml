@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke]">
+  <listeners>
+    <listener class-name="com.opt.base.TestListener"/>
+  </listeners>
+  <test name="RegisterUsedEmailTest(failed)">
+    <classes>
+      <class name="RegisterUsedEmailTest">
+        <methods>
+          <include name="RegisterUsedEmailTest"/>
+          <include name="methodTearDown"/>
+          <include name="methodSetUp"/>
+          <include name="setEnv"/>
+        </methods>
+      </class> <!-- RegisterUsedEmailTest -->
+    </classes>
+  </test> <!-- RegisterUsedEmailTest(failed) -->
+</suite> <!-- Failed suite [Smoke] -->

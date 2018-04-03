@@ -28,8 +28,8 @@ public class RegisterTest extends BaseTest{
         long number = (long)Math.floor(Math.random() * 9.0E9D) + 1000000000L;
         String phone = Long.toString(number);
 
-        registerPage.fillRegisterForm("Alex","Automation",email, "Street 256", "Darkwood", "2454", "Parola123/",
-                "Parola123/", "New South Wales", "23", "May", "1979");
+        registerPage.fillRegisterForm("Alex","Automation",email, "Street 256", "Darkwood", "2454", "Parola123/", "Parola123/",
+                "Australia", "New South Wales", "23", "May", "1979");
 
         registerPage.agreeTerms();
 
