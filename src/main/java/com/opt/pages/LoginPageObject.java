@@ -12,15 +12,15 @@ import java.io.IOException;
  */
 public class LoginPageObject extends BasePageObject<LoginPageObject> {
     private By returningMembersHeader = By.xpath(".//*[@id='login-form']/div/div[2]/div/div/h2");
-//    private By loginButton = By.cssSelector("#gigya-login-form > div:nth-child(2) > div:nth-child(3) > div:nth-child(5) > input:nth-child(1)");
-    private By loginButton = By.cssSelector("#send2");
-//    private By emailField = By.cssSelector("#gigya-login-form > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > input:nth-child(1)");
-    private By emailField = By.cssSelector("#email");
-//    private By passwordField = By.cssSelector("#gigya-login-form > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > input:nth-child(1)");
-    private By passwordField = By.cssSelector("#pass");
+    private By loginButton = By.cssSelector("#gigya-login-form > div:nth-child(2) > div:nth-child(3) > div:nth-child(5) > input:nth-child(1)");
+//    private By loginButton = By.cssSelector("#send2");
+    private By emailField = By.cssSelector("#gigya-login-form > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > input:nth-child(1)");
+//    private By emailField = By.cssSelector("#email");
+    private By passwordField = By.cssSelector("#gigya-login-form > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > input:nth-child(1)");
+//    private By passwordField = By.cssSelector("#pass");
 
-//    private By errorMsg = By.cssSelector("div.gigya-error-code-403042:nth-child(1)");
-    private By errorMsg = By.cssSelector(".error-msg > ul:nth-child(1) > li:nth-child(1) > span:nth-child(1)");
+    private By errorMsg = By.cssSelector("div.gigya-error-code-403042:nth-child(1)");
+//    private By errorMsg = By.cssSelector(".error-msg > ul:nth-child(1) > li:nth-child(1) > span:nth-child(1)");
 
     private By successMsgNewAccount = By.cssSelector(".success-msg>ul>li>span");
 //    private String url = BaseURL() + "customer/account/login/";

@@ -11,9 +11,11 @@ import java.io.IOException;
  */
 public class RegisterConfirmationPageObject extends BasePageObject<RegisterConfirmationPageObject> {
 
-    private By confirmationMsg = By.cssSelector(".success-msg>ul>li>span");
-    private By successBlock = By.cssSelector(".success-content");
-    private By header = By.cssSelector("h1");
+//    private By confirmationMsg = By.cssSelector(".success-msg>ul>li>span");
+    private By confirmationMsg = By.cssSelector("#gigya-resend-verification-code-form > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)");
+    private By successBlock = By.cssSelector("#gigya-resend-verification-code-form > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)");
+//    private By header = By.cssSelector("h1");
+    private By header = By.cssSelector("#onestepcheckout-form-container_content_caption");
 
     protected RegisterConfirmationPageObject(WebDriver driver) throws IOException {
         super(driver);

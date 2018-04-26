@@ -13,8 +13,8 @@ import java.io.IOException;
 public class LoginTest extends BaseTest {
     private String wrongEmail = "wrong@email.com";
     private String wrongPassword = "wrongPass";
-//    private String expectedErrorMsg = "Invalid login or password";
-    private String expectedErrorMsg = "Login failed. Please check your details and try again.";
+    private String expectedErrorMsg = "Invalid login or password";
+//    private String expectedErrorMsg = "Login failed. Please check your details and try again.";
     @Test(priority=2)
     public void positiveLoginTest() throws InterruptedException, IOException {
         HomepageObject homepage = new HomepageObject(driver);

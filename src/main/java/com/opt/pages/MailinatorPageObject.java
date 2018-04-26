@@ -13,7 +13,7 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
     private String url = "https://www.mailinator.com/";
     private By inboxF = By.cssSelector("input[id=\"inboxfield\"]");
     private By goButton = By.cssSelector(".btn.btn-dark");
-    private By activateMail = By.cssSelector("div.all_message-min_autor:nth-child(3)");
+    private By activateMail = By.xpath("/html/body/main/section/ul/li[2]/div/div[3]");
     private By clickToActivate = By.xpath("html/body/div[1]/table/tbody/tr/td/table/tbody/tr[5]/td/span/a");
     private By resetPass = By.xpath("html/body/div[1]/table/tbody/tr/td/table/tbody/tr[3]/td/span/span/a");
 
@@ -48,7 +48,7 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
         Thread.sleep(3000);
     }
 
-    public LoginPageObject clickToActivate() throws InterruptedException, IOException {
+    public CreateProgramPageObject clickToActivate() throws InterruptedException, IOException {
 //        System.out.println("Waiting for the emails to be received...");
 //        Thread.sleep(180000);
         clickOn(activateMail);
@@ -57,7 +57,7 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
         clickOn(clickToActivate);
         driver.switchTo().defaultContent();
         System.out.println("Account activated !");
-        return new LoginPageObject(driver);
+        return new CreateProgramPageObject(driver);
     }
 
     public ResetPasswordPageObject resetPass() throws InterruptedException, IOException {

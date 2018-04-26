@@ -34,24 +34,19 @@ public class RegisterTest extends BaseTest{
         registerPage.agreeTerms();
 
         RegisterConfirmationPageObject confirmationPage = registerPage.submitForm();
+        Thread.sleep(90000);
         confirmationPage.waitForConfirmationPage();
 
         String actualMsg = confirmationPage.getMessageText();
-        String expectedMsg = "Account confirmation is required. Please, check your email for the confirmation link. To resend the confirmation email please click here.";
+//        String expectedMsg = "Account confirmation is required. Please, check your email for the confirmation link. To resend the confirmation email please click here.";
+        String expectedMsg = "A verification email has been sent. Kindly follow the link to activate your account.";
         Assert.assertTrue(actualMsg.equals(expectedMsg), "Confirmation message doesn't match ! \nExpected: " + expectedMsg + "\nActual: " + actualMsg);
         System.out.println("******Confirmation message matches !******\n" + actualMsg);
 
 
         String actualBlock = confirmationPage.getBlockText();
         System.out.println(actualBlock);
-        String expectedBlock = "Thanks! You are almost there!\n" +
-                "Please check your emails to activate your account.\n" +
-                "We have sent you an activation email.\n" +
-                "Please click on the link to confirm your email address and membership.\n" +
-                "Once you have logged in your OPTIFAST ® VLCD™\n" +
-                "Program will be ready for you to start your weight loss journey.\n" +
-                "Simply go to MANAGE MY PROGRAM, then choose START NEW PROGRAM.\n" +
-                "See you soon!";
+        String expectedBlock = "Your registration has been received!";
         Assert.assertTrue(actualBlock.equals(expectedBlock), "Block  text doesn't match. \nExpected: " + expectedBlock + "\nActual: " + actualBlock);
         System.out.println("*******Block text matches !*******\n" + expectedBlock);
         System.out.println("Your account is " + email + " Password: Parola123/");
@@ -63,17 +58,17 @@ public class RegisterTest extends BaseTest{
         mailinator.waitForHomepageToLoad();
         mailinator.submitEmail(email);
         mailinator.clickGo();
-        LoginPageObject loginPage = mailinator.clickToActivate();
+        CreateProgramPageObject programPage = mailinator.clickToActivate();
         driver.switchTo().window("_other");
 
         //Login with the new credentials
-        loginPage.waitForLoginPageToLoad();
-        String expectedMessage = "Thank you for registering with Nestlé Health Science.";
-        String actualMessage = loginPage.getSuccessMessageNewAccount();
-        System.out.println(actualMessage);
-        Assert.assertTrue(actualMessage.equals(expectedMessage), "Register message does not match ! \nExpected: " + expectedMessage + "\nActual: " + actualMessage);
-        loginPage.fillInCredentials(email, "Parola123/");
-        CreateProgramPageObject programPage = loginPage.clickLoginButtonNewAccount();
+//        loginPage.waitForLoginPageToLoad();
+//        String expectedMessage = "Thank you for registering with Nestlé Health Science.";
+//        String actualMessage = loginPage.getSuccessMessageNewAccount();
+//        System.out.println(actualMessage);
+//        Assert.assertTrue(actualMessage.equals(expectedMessage), "Register message does not match ! \nExpected: " + expectedMessage + "\nActual: " + actualMessage);
+//        loginPage.fillInCredentials(email, "Parola123/");
+//        CreateProgramPageObject programPage = loginPage.clickLoginButtonNewAccount();
 
         if(driver.getPageSource().contains("your password has expired")){
             programPage.resetPass("Parola123/", "Parola1234/", "Parola1234/");
