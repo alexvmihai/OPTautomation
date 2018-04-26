@@ -29,13 +29,15 @@ public class HCPRegisterTest extends BaseTest {
         String phone = Long.toString(number);
 
         registerPage.fillInRegisterForm("Mr","Auto", "Robot", email, "Nutritionist", "Croc Avenue 12",
-                "Akolele", "Australia", "New South Wales", "2546", phone);
+                "Akolele", "Australia", "Sidney","New South Wales", "2546", phone, "Optifast123/");
 
         HCPConfirmationPage hcpConfirmPage = registerPage.submitForm();
+        Thread.sleep(90000);
         hcpConfirmPage.waitForPageToLoad();
-        String expectedConfirmText = "Your account is awaiting approval. Your account has been created but needs to be approved " +
-                "by an administrator before you can sign in. An e-mail will be sent to your email address used to register when your account" +
-                " is ready for you to complete the setup!";
+//        String expectedConfirmText = "Your account is awaiting approval. Your account has been created but needs to be approved " +
+//                "by an administrator before you can sign in. An e-mail will be sent to your email address used to register when your account" +
+//                " is ready for you to complete the setup!";
+        String expectedConfirmText = "Your access is awaiting activation";
         String actualConfirmText = hcpConfirmPage.getConfirmText();
         Assert.assertTrue(expectedConfirmText.equals(actualConfirmText), "Texts do not match !" + "\nExpected: " + expectedConfirmText
                             + "\nActual: " + actualConfirmText);

@@ -10,8 +10,10 @@ import java.io.IOException;
  * Created by alex.mihai on 1/9/2018.
  */
 public class HCPConfirmationPage extends BasePageObject<HCPConfirmationPage> {
-    private By confirmationText = By.cssSelector(".confirm-text>p");
+//    private By confirmationText = By.cssSelector(".confirm-text>p");
     private By returnHomeButton = By.cssSelector(".button.-arrow");
+    private By confirmationText = By.cssSelector("#gigya-resend-verification-code-form > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)");
+    private By header = By.cssSelector("#hcp-form-container_content_caption");
 
     protected HCPConfirmationPage(WebDriver driver) throws IOException {
         super(driver);
@@ -19,7 +21,8 @@ public class HCPConfirmationPage extends BasePageObject<HCPConfirmationPage> {
 
     public void waitForPageToLoad(){
         waitForVisibilityOf(confirmationText);
-        waitForVisibilityOf(returnHomeButton);
+//        waitForVisibilityOf(returnHomeButton);
+        waitForVisibilityOf(header);
         System.out.println("Page loaded !!");
     }
 
