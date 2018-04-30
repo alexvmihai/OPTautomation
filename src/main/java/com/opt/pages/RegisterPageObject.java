@@ -39,7 +39,7 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
 //    private By completeF = By.cssSelector("#onestepcheckout-place-order");
     private By leftBlock1F = By.cssSelector(".login-introduction");
     private By leftBlock2F = By.cssSelector(".account-box.-list.-faqs");
-    private By duplicateMail = By.cssSelector(".gigya-error-msg-active");
+    private By duplicateMail = By.cssSelector(".gigya-error-code-400003");
 //    private By duplicateMail = By.cssSelector(".error-msg > ul:nth-child(1) > li:nth-child(1) > span:nth-child(1)");
 //    private By duplicateMail = By.cssSelector("#onestepcheckout-email-error-message");
     private By date = By.cssSelector("#gigya-textbox-55856667791280660");
