@@ -32,6 +32,7 @@ public class HCPRegisterTest extends BaseTest {
                 "Akolele", "Australia", "Sidney","New South Wales", "2546", phone, "Optifast123/");
 
         HCPConfirmationPage hcpConfirmPage = registerPage.submitForm();
+        //Captcha
         Thread.sleep(90000);
         hcpConfirmPage.waitForPageToLoad();
 //        String expectedConfirmText = "Your account is awaiting approval. Your account has been created but needs to be approved " +
@@ -69,27 +70,27 @@ public class HCPRegisterTest extends BaseTest {
         System.out.println("HCP Account accredited successfully !");
 
         //Reset pass from mail
-        Thread.sleep(3000);
+        Thread.sleep(90000);
         MailinatorPageObject mailinator = new MailinatorPageObject(driver);
         mailinator.openMailinator();
         mailinator.waitForHomepageToLoad();
         mailinator.submitEmail(email);
         mailinator.clickGo();
-        ResetPasswordPageObject resetPassPage = mailinator.resetPass();
+        HCPDashboardPageObject hcpDashboard = mailinator.resetPass();
         driver.switchTo().window("_other");
-        resetPassPage.waitForPageToLoad();
-        resetPassPage.typePassword("Optifast123/");
+//        resetPassPage.waitForPageToLoad();
+//        resetPassPage.typePassword("Optifast123/");
 //        resetPassPage.closeTerms();
-        LoginPageObject loginPage = resetPassPage.submit();
-        loginPage.waitForPassMsgToLoad();
-        String expectedMessagePass = "Your password has been updated.";
-        String actualMessagePass = loginPage.getPassUpdatedText();
-        Assert.assertTrue(expectedMessagePass.equals(actualMessagePass), "Password Update message does not match !" +
-                                "\nExpected: " + expectedMessagePass + "\nActual: " + actualMessagePass);
+//        LoginPageObject loginPage = resetPassPage.submit();
+//        loginPage.waitForPassMsgToLoad();
+//        String expectedMessagePass = "Your password has been updated.";
+//        String actualMessagePass = loginPage.getPassUpdatedText();
+//        Assert.assertTrue(expectedMessagePass.equals(actualMessagePass), "Password Update message does not match !" +
+//                                "\nExpected: " + expectedMessagePass + "\nActual: " + actualMessagePass);
 
          //Login with the new account
-        loginPage.fillInCredentials(email, "Optifast123/");
-        HCPDashboardPageObject hcpDashboard = loginPage.clickLoginButtonHCP();
+//        loginPage.fillInCredentials(email, "Optifast123/");
+//        HCPDashboardPageObject hcpDashboard = loginPage.clickLoginButtonHCP();
         hcpDashboard.waitForPageToLoad();
         String accreditation = hcpDashboard.getAccreditationID();
         System.out.println("Your accreditation id is: " + accreditation);

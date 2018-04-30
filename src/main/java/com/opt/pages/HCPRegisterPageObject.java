@@ -94,7 +94,8 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
         type(password, passwordConfF);
     }
 
-    public HCPConfirmationPage submitForm() throws IOException {
+    public HCPConfirmationPage submitForm() throws IOException, InterruptedException {
+        Thread.sleep(3000);
         clickOn(registerButtonF);
         return new HCPConfirmationPage(driver);
     }

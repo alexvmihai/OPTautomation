@@ -16,7 +16,7 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
     private By popUp = By.cssSelector(".message-popup-head > a:nth-child(1) > span:nth-child(1)");
     private By customers = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[4]/a/span");
     private By manageCustomers = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[4]/ul/li[1]/a/span");
-    private By HCPRegistrationRequests = By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/ul/li[7]/ul/li/a/span");
+    private By HCPRegistrationRequests = By.cssSelector("li.level0:nth-child(8) > ul:nth-child(2) > li:nth-child(7) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(1)");
 
 
     protected BEDashboardPageObject(WebDriver driver) throws IOException {
@@ -52,16 +52,18 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
         return new BEManageCustomersPageObject(driver);
     }
 
-    public void mouseOverEwave(){
-        WebElement element = driver.findElement(By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/a/span"));
+    public void mouseOverEwave() throws InterruptedException {
+        WebElement element = driver.findElement(By.cssSelector("li.level0:nth-child(8) > a:nth-child(1) > span:nth-child(1)"));
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
+        Thread.sleep(2000);
     }
 
-    public void mouseOverHCP(){
-        WebElement element = driver.findElement(By.xpath("html/body/div[1]/div[1]/div[3]/ul/li[8]/ul/li[7]/a/span"));
+    public void mouseOverHCP() throws InterruptedException {
+        WebElement element = driver.findElement(By.cssSelector("li.level0:nth-child(8) > ul:nth-child(2) > li:nth-child(7) > a:nth-child(1) > span:nth-child(1)"));
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
+        Thread.sleep(2000);
     }
 
     public HCPRegistrationRequestsPageObject clickHCPRequests() throws IOException {

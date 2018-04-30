@@ -3,6 +3,7 @@ package com.opt.pages;
 import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
 
@@ -13,9 +14,9 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
     private String url = "https://www.mailinator.com/";
     private By inboxF = By.cssSelector("input[id=\"inboxfield\"]");
     private By goButton = By.cssSelector(".btn.btn-dark");
-    private By activateMail = By.xpath("/html/body/main/section/ul/li[2]/div/div[3]");
+    private By activateMail = By.xpath("//*[contains(text(), 'Activation')]");
     private By clickToActivate = By.xpath("html/body/div[1]/table/tbody/tr/td/table/tbody/tr[5]/td/span/a");
-    private By resetPass = By.xpath("html/body/div[1]/table/tbody/tr/td/table/tbody/tr[3]/td/span/span/a");
+    private By resetPass = By.cssSelector("body > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)");
 
 
 
@@ -60,14 +61,14 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
         return new CreateProgramPageObject(driver);
     }
 
-    public ResetPasswordPageObject resetPass() throws InterruptedException, IOException {
+    public HCPDashboardPageObject resetPass() throws InterruptedException, IOException {
         clickOn(activateMail);
         Thread.sleep(4000);
         driver.switchTo().frame("msg_body");
         clickOn(resetPass);
         driver.switchTo().defaultContent();
         System.out.println("Going to Password reset page...");
-        return new ResetPasswordPageObject(driver);
+        return new HCPDashboardPageObject (driver);
 
     }
 }
