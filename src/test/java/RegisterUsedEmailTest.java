@@ -22,10 +22,10 @@ public class RegisterUsedEmailTest extends BaseTest{
         String duplicateMailProd = "alex_optifast2208@mailinator.com";
         if (setEnv() == "PPRD"){
             registerPage.fillRegisterForm("Alex", "alex", duplicateMail, "Street 10", "Sidney", "2092", "Optifast123/", "Optifast123/",
-                    "Australia","New South Wales", "20", "May", "1988");
+                    "Australia","New South Wales");
         } else if (setEnv() == "PROD"){
             registerPage.fillRegisterForm("Alex", "alex", duplicateMailProd, "Street 10", "Sidney", "2092", "Optifast123/", "Optifast123/",
-                     "Australia", "New South Wales", "20", "May", "1988");
+                     "Australia", "New South Wales");
         }
 
         Thread.sleep(5000);

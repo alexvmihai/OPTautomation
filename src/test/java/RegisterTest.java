@@ -29,7 +29,7 @@ public class RegisterTest extends BaseTest{
         String phone = Long.toString(number);
 
         registerPage.fillRegisterForm("Alex","Automation",email, "Street 256", "Darkwood", "2454", "Parola123/", "Parola123/",
-                "Australia", "New South Wales", "23", "May", "1979");
+                "Australia", "New South Wales");
 
         registerPage.agreeTerms();
 

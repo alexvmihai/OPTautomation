@@ -82,9 +82,10 @@ public class AboutMePageObject extends BasePageObject<AboutMePageObject> {
         return new MyGoalPageObject(driver);
     }
 
-    public void acceptPrecaution(){
+    public MyGoalPageObject acceptPrecaution() throws IOException{
         System.out.println("Accepting precaution...");
         clickOn(precautionButton);
+        return new MyGoalPageObject(driver);
     }
 
 }

@@ -1,9 +1,12 @@
 package com.opt.pages;
 
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import sun.plugin2.message.JavaScriptBaseMessage;
 
 import java.io.IOException;
 
@@ -59,8 +62,8 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
         System.out.println("Register Page loaded succesfully !");
     }
 
-    public void fillRegisterForm(String firstName, String lastName, String email, String address, String city, String postcode, String password, String passwordConfirm, String country, String state,
-                                 String day, String month, String year) throws InterruptedException {
+    public void fillRegisterForm(String firstName, String lastName, String email, String address, String city, String postcode, String password, String passwordConfirm, String country, String state
+                                 ) throws InterruptedException {
         System.out.println("Filling in the form...");
         type(firstName, firstNameF);
         type(lastName, lastNameF);
@@ -68,8 +71,6 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
         type(address, addressF);
         type(city, cityF);
         type(postcode, postcodeF);
-        type(password, passwordF);
-        type(passwordConfirm, confirmPasswordF);
         Select selectCountry = new Select(driver.findElement(By.cssSelector("#gigya-dropdown-85978887874792580")));
 //        Select selectCountry = new Select(driver.findElement(By.cssSelector("#billing\\:country_id")));
 
@@ -83,16 +84,19 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
 
         clickOn(date);
         Thread.sleep(3000);
-        Select selectYear = new Select(driver.findElement(By.cssSelector(".ui-datepicker-year")));
-        selectYear.selectByVisibleText(year);
-        clickOn(dayOfMonth);
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("document.getElementById('gigya-textbox-55856667791280660').value='1949-04-19';");
+//        Select selectYear = new Select(driver.findElement(By.cssSelector(".ui-datepicker-year")));
+//        selectYear.selectByVisibleText(year);
+//        clickOn(dayOfMonth);
 
 //        Select selectMonth = new Select(driver.findElement(By.cssSelector("#billing\\:month")));
 
 //        selectMonth.selectByVisibleText(month);
 //        Select selectYear = new Select(driver.findElement(By.cssSelector("#gigya-dropdown-149542757656976770")));
 ////        Select selectYear = new Select(driver.findElement(By.cssSelector("#billing\\:year")));
-
+        type(password, passwordF);
+        type(passwordConfirm, confirmPasswordF);
 
 
 

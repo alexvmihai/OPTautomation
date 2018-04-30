@@ -36,8 +36,8 @@ public class CreateProgramTest extends RegisterTest{
         aboutMePage.setMedicalConditions();
         System.out.println("Your BMI is " + aboutMePage.getBMI());
         aboutMePage.setMyGoal();
-        aboutMePage.acceptPrecaution();
-        MyGoalPageObject myGoalPage = aboutMePage.acceptRecommendation();
+        aboutMePage.acceptRecommendation();
+        MyGoalPageObject myGoalPage = aboutMePage.acceptPrecaution();
         myGoalPage.waitForPageToLoad();
         System.out.println("Your goal weight is: " + myGoalPage.getGoalWeight());
         System.out.println("Your weight to lose is: " + myGoalPage.getWeightToLose());
