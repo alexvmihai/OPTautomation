@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class CreateProgramPage extends BasePageObject<CreateProgramPage>{
     private By forum = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[5]/span");
-    private By communityForum = By.xpath("html/body/div[2]/header/div[2]/div/ul/li[5]/ul/li[1]/a");
+    private By communityForum = By.cssSelector("li.menu-item:nth-child(5) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)");
 
     public CreateProgramPage(WebDriver driver) throws IOException {
         super(driver);
