@@ -33,7 +33,7 @@ public class HCPRegisterTest extends BaseTest {
 
         HCPConfirmationPage hcpConfirmPage = registerPage.submitForm();
         //Captcha
-        Thread.sleep(90000);
+//        Thread.sleep(90000);
         hcpConfirmPage.waitForPageToLoad();
 //        String expectedConfirmText = "Your account is awaiting approval. Your account has been created but needs to be approved " +
 //                "by an administrator before you can sign in. An e-mail will be sent to your email address used to register when your account" +

@@ -66,7 +66,8 @@ public class BEDashboardPageObject extends BasePageObject<BEDashboardPageObject>
         Thread.sleep(2000);
     }
 
-    public HCPRegistrationRequestsPageObject clickHCPRequests() throws IOException {
+    public HCPRegistrationRequestsPageObject clickHCPRequests() throws IOException, InterruptedException {
+//        Thread.sleep(3000);
         clickOn(HCPRegistrationRequests);
         return new HCPRegistrationRequestsPageObject(driver);
     }

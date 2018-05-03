@@ -2,7 +2,9 @@ package com.opt.pages;
 
 import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
@@ -37,7 +39,7 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
 //    private By phoneF = By.cssSelector("#telephone");
     private By phoneF = By.cssSelector("#gigya-textbox-96403577394262380");
 //    private By agreementF = By.cssSelector("li.control:nth-child(3) > div:nth-child(1) > label:nth-child(2)");
-    private By agreementF = By.cssSelector("#gigya-register-form > div:nth-child(1) > div:nth-child(24) > label:nth-child(2) > span:nth-child(1)");
+    private By agreementF = By.cssSelector("#gigya-checkbox-105686350580283040");
 //    private By registerButtonF = By.cssSelector(".button.-arrow.right");
     private By registerButtonF = By.cssSelector("#gigya-register-form > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)");
     private By checkboxAccreditation = By.cssSelector("#gigya-register-form > div:nth-child(1) > div:nth-child(25) > label:nth-child(2) > span:nth-child(1)");
@@ -87,7 +89,9 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
         type(city, stateF);
         type(postcode, postCodeF);
         type(phone, phoneF);
-        clickOn(agreementF);
+//        clickOn(agreementF);
+        WebElement el = driver.findElement(By.cssSelector("#gigya-checkbox-105686350580283040"));
+        el.sendKeys(Keys.RETURN);
         clickOn(checkboxAccreditation);
         clickOn(checkboxNestle);
         type(password, passwordF);
