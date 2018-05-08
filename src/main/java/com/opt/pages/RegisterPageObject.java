@@ -2,9 +2,7 @@ package com.opt.pages;
 
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.opt.base.BasePageObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import sun.plugin2.message.JavaScriptBaseMessage;
 
@@ -36,7 +34,7 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
 //    private By passwordF = By.cssSelector("#password");
     private By confirmPasswordF = By.cssSelector("#gigya-password-20946175269470924");
 //    private By confirmPasswordF = By.cssSelector("#confirmation");
-    private By termsF = By.cssSelector("#gigya-register-form > div:nth-child(1) > div:nth-child(16) > label:nth-child(2)");
+    private By termsF = By.cssSelector("#gigya-checkbox-27785807388893270 ");
 //    private By termsF = By.cssSelector("li.control:nth-child(3) > div:nth-child(1) > label:nth-child(2)");
     private By completeF = By.cssSelector("#gigya-register-form > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)");
 //    private By completeF = By.cssSelector("#onestepcheckout-place-order");
@@ -103,7 +101,9 @@ public class RegisterPageObject extends BasePageObject<RegisterPageObject> {
     }
 
     public void agreeTerms(){
-        clickOn(termsF);
+        ((JavascriptExecutor) driver).executeScript("javascript:window.scrollBy(0,800)");
+        WebElement terms = driver.findElement(By.cssSelector("#gigya-checkbox-27785807388893270"));
+        terms.sendKeys(Keys.SPACE);
         System.out.println("Terms and conditions agreed.");
     }
 

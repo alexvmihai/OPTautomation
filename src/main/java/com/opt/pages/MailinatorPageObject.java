@@ -15,7 +15,7 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
     private By inboxF = By.cssSelector("input[id=\"inboxfield\"]");
     private By goButton = By.cssSelector(".btn.btn-dark");
     private By activateMail = By.xpath("//*[contains(text(), 'Activation')]");
-    private By clickToActivate = By.xpath("html/body/div[1]/table/tbody/tr/td/table/tbody/tr[5]/td/span/a");
+    private By clickToActivate = By.cssSelector("body > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)");
     private By resetPass = By.cssSelector("body > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(1) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)");
 
 
