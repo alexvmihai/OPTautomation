@@ -70,6 +70,7 @@ public class HCPRegisterTest extends BaseTest {
         System.out.println("HCP Account accredited successfully !");
 
         //Reset pass from mail
+        System.out.println("Sleeping...");
         Thread.sleep(90000);
         MailinatorPageObject mailinator = new MailinatorPageObject(driver);
         mailinator.openMailinator();
