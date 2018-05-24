@@ -22,7 +22,7 @@ public class HCPRegisterTest extends BaseTest {
         Thread.sleep(7000);
         //Generate random email
         long Random = Math.round(Math.random() * 1357987.0D);
-        String email = "amihai_test_hcp" + Random + "@mailinator.com";
+        String email = "alex.mihai.optaros2+" + Random + "@gmail.com";
 
         //Generate random phone
         long number = (long)Math.floor(Math.random() * 9.0E9D) + 1000000000L;
@@ -51,7 +51,7 @@ public class HCPRegisterTest extends BaseTest {
         gmail.openMailinator();
         gmail.waitForHomepageToLoad();
         gmail.submitHCPEmail();
-        CreateProgramPageObject programPage = gmail.clickToActivate();
+        gmail.clickToActivate();
         Thread.sleep(9000);
         //Switch to new tab
         for(String winHandle : driver.getWindowHandles()){
@@ -93,8 +93,11 @@ public class HCPRegisterTest extends BaseTest {
 //                                "\nExpected: " + expectedMessagePass + "\nActual: " + actualMessagePass);
 
          //Login with the new account
-        LoginPageObject loginPage = new LoginPageObject(driver);
-        loginPage.openLoginPage();
+        HomepageObject homepage = new HomepageObject(driver);
+        homepage.openHomePage();
+        homepage.acceptPrompt();
+        homepage.waitForHomepageToLoad();
+        LoginPageObject loginPage = homepage.openLogin();
         loginPage.waitForLoginPageToLoad();
         loginPage.fillInCredentials(email, "Optifast123/");
         HCPDashboardPageObject hcpDashboard = loginPage.clickLoginButtonHCP();
