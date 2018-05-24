@@ -22,7 +22,7 @@ public class RegisterTest extends BaseTest{
         registerPage.waitForRegisterPageToLoad();
         //Generate random email
         long Random = Math.round(Math.random() * 1357987.0D);
-        String email = "amihai_test" + Random + "@mailinator.com";
+        String email = "alex.mihai.optaros+" + Random + "@gmail.com";
 
         //Generate random phone
         long number = (long)Math.floor(Math.random() * 9.0E9D) + 1000000000L;
@@ -34,12 +34,12 @@ public class RegisterTest extends BaseTest{
         registerPage.agreeTerms();
 
         RegisterConfirmationPageObject confirmationPage = registerPage.submitForm();
-        Thread.sleep(90000);
+        Thread.sleep(9000);
         confirmationPage.waitForConfirmationPage();
 
         String actualMsg = confirmationPage.getMessageText();
 //        String expectedMsg = "Account confirmation is required. Please, check your email for the confirmation link. To resend the confirmation email please click here.";
-        String expectedMsg = "A verification email has been sent. Kindly follow the link to activate your account.";
+        String expectedMsg = "Thank you for signing up. Please confirm your account by following the instructions in the email we’ve sent to you.";
         Assert.assertTrue(actualMsg.equals(expectedMsg), "Confirmation message doesn't match ! \nExpected: " + expectedMsg + "\nActual: " + actualMsg);
         System.out.println("******Confirmation message matches !******\n" + actualMsg);
 
@@ -53,13 +53,18 @@ public class RegisterTest extends BaseTest{
 
         //Activate the account from the email
         Thread.sleep(3000);
-        MailinatorPageObject mailinator = new MailinatorPageObject(driver);
-        mailinator.openMailinator();
-        mailinator.waitForHomepageToLoad();
-        mailinator.submitEmail(email);
-        mailinator.clickGo();
-        CreateProgramPageObject programPage = mailinator.clickToActivate();
-        driver.switchTo().window("_other");
+        MailinatorPageObject gmail = new MailinatorPageObject(driver);
+        gmail.openMailinator();
+        gmail.waitForHomepageToLoad();
+        gmail.submitEmail();
+        CreateProgramPageObject programPage = gmail.clickToActivate();
+        Thread.sleep(9000);
+        //Switch to new tab
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        System.out.println(driver.getTitle());
+//        driver.switchTo().window("OPTIFAST | Very Low Calorie Diet");
 
         //Login with the new credentials
 //        loginPage.waitForLoginPageToLoad();

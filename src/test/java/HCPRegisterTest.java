@@ -38,13 +38,25 @@ public class HCPRegisterTest extends BaseTest {
 //        String expectedConfirmText = "Your account is awaiting approval. Your account has been created but needs to be approved " +
 //                "by an administrator before you can sign in. An e-mail will be sent to your email address used to register when your account" +
 //                " is ready for you to complete the setup!";
-        String expectedConfirmText = "Your access is awaiting activation";
+        String expectedConfirmText = "Almost there!";
         String actualConfirmText = hcpConfirmPage.getConfirmText();
         Assert.assertTrue(expectedConfirmText.equals(actualConfirmText), "Texts do not match !" + "\nExpected: " + expectedConfirmText
                             + "\nActual: " + actualConfirmText);
         System.out.println("Registration submitted successfully !" + "\nYour account is : " + email );
 
-        //Activate the account from admin
+
+        //Activate the account from the email
+        Thread.sleep(3000);
+        MailinatorPageObject gmail = new MailinatorPageObject(driver);
+        gmail.openMailinator();
+        gmail.waitForHomepageToLoad();
+        gmail.submitHCPEmail();
+        CreateProgramPageObject programPage = gmail.clickToActivate();
+        Thread.sleep(9000);
+        //Switch to new tab
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
 
         BEHomePageObject adminHomepage = new BEHomePageObject(driver);
         adminHomepage.openHomepage();
@@ -69,16 +81,7 @@ public class HCPRegisterTest extends BaseTest {
                                             expectedMessage + "\nActual: " + actualMessage);
         System.out.println("HCP Account accredited successfully !");
 
-        //Reset pass from mail
-        System.out.println("Sleeping...");
-        Thread.sleep(90000);
-        MailinatorPageObject mailinator = new MailinatorPageObject(driver);
-        mailinator.openMailinator();
-        mailinator.waitForHomepageToLoad();
-        mailinator.submitEmail(email);
-        mailinator.clickGo();
-        HCPDashboardPageObject hcpDashboard = mailinator.resetPass();
-        driver.switchTo().window("_other");
+
 //        resetPassPage.waitForPageToLoad();
 //        resetPassPage.typePassword("Optifast123/");
 //        resetPassPage.closeTerms();
@@ -90,8 +93,11 @@ public class HCPRegisterTest extends BaseTest {
 //                                "\nExpected: " + expectedMessagePass + "\nActual: " + actualMessagePass);
 
          //Login with the new account
-//        loginPage.fillInCredentials(email, "Optifast123/");
-//        HCPDashboardPageObject hcpDashboard = loginPage.clickLoginButtonHCP();
+        LoginPageObject loginPage = new LoginPageObject(driver);
+        loginPage.openLoginPage();
+        loginPage.waitForLoginPageToLoad();
+        loginPage.fillInCredentials(email, "Optifast123/");
+        HCPDashboardPageObject hcpDashboard = loginPage.clickLoginButtonHCP();
         hcpDashboard.waitForPageToLoad();
         String accreditation = hcpDashboard.getAccreditationID();
         System.out.println("Your accreditation id is: " + accreditation);

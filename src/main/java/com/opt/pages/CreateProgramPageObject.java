@@ -2,7 +2,9 @@ package com.opt.pages;
 
 import com.opt.base.BasePageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
 
@@ -10,7 +12,7 @@ import java.io.IOException;
  * Created by alex.mihai on 10/2/2017.
  */
 public class CreateProgramPageObject extends BasePageObject<CreateProgramPageObject> {
-    private By aboutMe = By.cssSelector(".step-title");
+    private By aboutMe = By.cssSelector("#program-step-about > h2:nth-child(1)");
     private By contentRow = By.cssSelector(".above-content.row");
     private By programStepAbout = By.cssSelector("#program-step-about");
     private By resetPassHeader = By.cssSelector("h1.row");
@@ -41,5 +43,7 @@ public class CreateProgramPageObject extends BasePageObject<CreateProgramPageObj
         Thread.sleep(7000);
         return new AccountDashboardPageObject(driver);
     }
+
+
 
 }

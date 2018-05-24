@@ -15,7 +15,7 @@ public class RegisterConfirmationPageObject extends BasePageObject<RegisterConfi
     private By confirmationMsg = By.cssSelector("#gigya-resend-verification-code-form > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)");
     private By successBlock = By.cssSelector("#gigya-resend-verification-code-form > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)");
 //    private By header = By.cssSelector("h1");
-    private By header = By.cssSelector("#onestepcheckout-form-container_content_caption");
+    private By header = By.cssSelector("#gigya-resend-verification-code-form > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)");
 
     protected RegisterConfirmationPageObject(WebDriver driver) throws IOException {
         super(driver);

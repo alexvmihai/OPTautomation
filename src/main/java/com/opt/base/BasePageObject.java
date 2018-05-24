@@ -133,6 +133,23 @@ public class BasePageObject<T> extends BaseTest {
         }
     }
 
+    public String[] getMemberCredentials(String filePath) throws IOException{
+        Properties properties = new Properties();
+        properties.load(new FileInputStream(filePath));
+        String email = properties.getProperty("member_email_pprd");
+        String pass = properties.getProperty("member_pass_pprd");
+        String[] credentials = {email, pass};
+        return credentials;
+    }
+    public String[] getHCPredentials(String filePath) throws IOException{
+        Properties properties = new Properties();
+        properties.load(new FileInputStream(filePath));
+        String email = properties.getProperty("hcp_email_pprd");
+        String pass = properties.getProperty("hcp_pass_pprd");
+        String[] credentials = {email, pass};
+        return credentials;
+    }
+
     public String getURL(String path, String name) throws IOException{
         Properties properties = new Properties();
         properties.load(new FileInputStream(path));
