@@ -43,7 +43,7 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
 //    private By registerButtonF = By.cssSelector(".button.-arrow.right");
     private By registerButtonF = By.cssSelector("#gigya-register-form > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)");
     private By checkboxAccreditation = By.cssSelector("#gigya-register-form > div:nth-child(1) > div:nth-child(25) > label:nth-child(2) > span:nth-child(1)");
-    private By checkboxNestle = By.cssSelector("#gigya-register-form > div:nth-child(1) > div:nth-child(26) > label:nth-child(2) > span:nth-child(1)");
+    private By checkboxNestle = By.cssSelector("#gigya-register-form > div:nth-child(1) > div:nth-child(24) > label:nth-child(2) > span:nth-child(1)");
     private By passwordF = By.cssSelector("#gigya-password-96723428394598540");
     private By passwordConfF = By.cssSelector("#gigya-password-20946175269470924");
 
@@ -81,7 +81,7 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
         Select selectProfession = new Select(driver.findElement(By.cssSelector("#gigya-dropdown-101984559795693000")));
         selectProfession.selectByVisibleText(profession);
         type(address, addressF);
-        type(suburb, suburbF);
+//        type(suburb, suburbF);
         Select selectCountry = new Select(driver.findElement(By.cssSelector("#gigya-dropdown-85978887874792580")));
         selectCountry.selectByVisibleText(country);
         Select selectState = new Select(driver.findElement(By.cssSelector("#gigya-dropdown-141415150774347000")));
@@ -90,8 +90,8 @@ public class HCPRegisterPageObject extends BasePageObject<HCPRegisterPageObject>
         type(postcode, postCodeF);
         type(phone, phoneF);
 //        clickOn(agreementF);
-        WebElement el = driver.findElement(By.cssSelector("#gigya-checkbox-105686350580283040"));
-        el.sendKeys(Keys.RETURN);
+//        WebElement el = driver.findElement(By.cssSelector("#gigya-checkbox-105686350580283040"));
+//        el.sendKeys(Keys.RETURN);
         clickOn(checkboxAccreditation);
         clickOn(checkboxNestle);
         type(password, passwordF);
