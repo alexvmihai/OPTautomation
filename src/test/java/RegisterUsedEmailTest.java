@@ -18,7 +18,7 @@ public class RegisterUsedEmailTest extends BaseTest{
         homepage.waitForHomepageToLoad();
         RegisterPageObject registerPage = homepage.clickJoinNow();
         registerPage.waitForRegisterPageToLoad();
-        String duplicateMail = "alex_optifast3@mailinator.com";
+        String duplicateMail = "alex.mihai.optaros@gmail.com";
         String duplicateMailProd = "alex_optifast2208@mailinator.com";
         if (setEnv() == "PPRD"){
             registerPage.fillRegisterForm("Alex", "alex", duplicateMail, "Street 10", "Sidney", "2092", "Optifast123/", "Optifast123/",
