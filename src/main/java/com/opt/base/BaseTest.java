@@ -20,7 +20,7 @@ public class BaseTest  {
 
     @BeforeClass
     public String setEnv(){
-        String env = "PROD";
+        String env = "PPRD";
         return env;
     }
 

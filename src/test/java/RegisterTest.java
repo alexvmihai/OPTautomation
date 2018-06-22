@@ -67,13 +67,20 @@ public class RegisterTest extends BaseTest{
 //        driver.switchTo().window("OPTIFAST | Very Low Calorie Diet");
 
         //Login with the new credentials
-//        loginPage.waitForLoginPageToLoad();
+        if(setEnv() == "PPRD"){
+            HomepageObject homepage1 = new HomepageObject(driver);
+            homepage1.openHomePage();
+            homepage1.waitForHomepageToLoad();
+            LoginPageObject loginPage = homepage1.openLogin();
+            loginPage.waitForLoginPageToLoad();
 //        String expectedMessage = "Thank you for registering with Nestlé Health Science.";
 //        String actualMessage = loginPage.getSuccessMessageNewAccount();
 //        System.out.println(actualMessage);
 //        Assert.assertTrue(actualMessage.equals(expectedMessage), "Register message does not match ! \nExpected: " + expectedMessage + "\nActual: " + actualMessage);
-//        loginPage.fillInCredentials(email, "Parola123/");
-//        CreateProgramPageObject programPage = loginPage.clickLoginButtonNewAccount();
+            loginPage.fillInCredentials(email, "Parola123/");
+            CreateProgramPageObject programPage2 = loginPage.clickLoginButtonNewAccount();
+        }
+
 
         if(driver.getPageSource().contains("your password has expired")){
             programPage.resetPass("Parola123/", "Parola1234/", "Parola1234/");

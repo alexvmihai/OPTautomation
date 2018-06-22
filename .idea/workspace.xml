@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b06878f-7dcc-4997-b524-da55e19c46e7" name="Default" comment="" />
+    <list default="true" id="5b06878f-7dcc-4997-b524-da55e19c46e7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../optifast/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../optifast/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optifast/src/test/java/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optifast/src/test/java/RegisterTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,22 +15,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$/..////optifast_reports/" userTempatePath="" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$/../////optifast_reports/" userTempatePath="" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HCPRegisterTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/HCPRegisterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="50" column="28" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MailinatorPageObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/MailinatorPageObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-521">
+            <state relative-caret-position="510">
               <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
             </state>
           </provider>
@@ -41,29 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegisterTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/RegisterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="61" column="8" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="465">
+              <caret line="80" column="90" selection-start-line="80" selection-start-column="90" selection-end-line="80" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HCPRegisterPageObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/HCPRegisterPageObject.java">
+      <file leaf-file-name="HomepageObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/HomepageObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateProgramPageObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/CreateProgramPageObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="425">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -71,13 +57,13 @@
       <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="391">
+              <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterUsedEmailTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegisterUsedEmailTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/RegisterUsedEmailTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -89,11 +75,21 @@
       <file leaf-file-name="BasePageObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BasePageObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="179">
+              <caret line="159" column="18" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="18" />
               <folding>
+                <element signature="e#1586#1587#0" expanded="true" />
                 <element signature="e#1623#1624#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPageObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/LoginPageObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -143,9 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/opt/base/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/opt/pages/LoginPageObject.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LoginTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/opt/pages/RegisterPageObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/opt/pages/RegisterConfirmationPageObject.java" />
         <option value="$PROJECT_DIR$/src/test/java/RegisterTest.java" />
@@ -192,8 +185,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/opt/base/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/RegisterUsedEmailTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/opt/base/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/opt/base/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RegisterUsedEmailTest.java" />
         <option value="$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BaseTest.java" />
-        <option value="$PROJECT_DIR$/../optifast/src/test/java/RegisterUsedEmailTest.java" />
+        <option value="$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/LoginPageObject.java" />
+        <option value="$PROJECT_DIR$/../optifast/src/test/java/RegisterTest.java" />
       </list>
     </option>
   </component>
@@ -235,7 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,12 +317,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/..//////////////////////////Selenium_automation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/..///////////////////////////Selenium_automation" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -350,7 +346,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.RegisterUsedEmailTest">
+  <component name="RunManager" selected="TestNG.RegisterTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -373,34 +369,11 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="AddMealTodayTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/optifast/src/test/resources/testng.xml (2)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="optifast" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddMealTodayTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="D:/optifast/src/test/resources/testng.xml (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="optifast" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/../optifast/src/test/resources/testng.xml" />
       <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
@@ -423,7 +396,7 @@
       <module name="optifast" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/../optifast/src/test/resources/testng.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
       <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
@@ -449,6 +422,29 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HCPRegisterTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="RegisterTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="optifast" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegisterTest" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -539,18 +535,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.HCPRegisterTest" />
-      <item itemvalue="TestNG.D:/optifast/src/test/resources/testng.xml (1)" />
       <item itemvalue="TestNG.RegisterUsedEmailTest" />
-      <item itemvalue="TestNG.AddMealTodayTest" />
       <item itemvalue="TestNG.D:/optifast/src/test/resources/testng.xml" />
+      <item itemvalue="TestNG.D:/optifast/src/test/resources/testng.xml (2)" />
+      <item itemvalue="TestNG.RegisterTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegisterTest" />
+        <item itemvalue="TestNG.D:/optifast/src/test/resources/testng.xml (2)" />
         <item itemvalue="TestNG.RegisterUsedEmailTest" />
         <item itemvalue="TestNG.D:/optifast/src/test/resources/testng.xml" />
         <item itemvalue="TestNG.HCPRegisterTest" />
-        <item itemvalue="TestNG.AddMealTodayTest" />
-        <item itemvalue="TestNG.D:/optifast/src/test/resources/testng.xml (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -568,35 +564,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__optifast_src_test_resources_testng_xml_(1) - 2018.06.04 at 14h 31m 23s.xml">
-      <configuration name="D:/optifast/src/test/resources/testng.xml (1)" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 14h 33m 22s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__optifast_src_test_resources_testng_xml_(1) - 2018.06.04 at 16h 43m 41s.xml">
-      <configuration name="D:/optifast/src/test/resources/testng.xml (1)" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 14h 39m 27s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddMealTodayTest - 2018.06.04 at 16h 54m 35s.xml">
-      <configuration name="AddMealTodayTest" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 14h 41m 42s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddMealTodayTest - 2018.06.04 at 16h 55m 41s.xml">
-      <configuration name="AddMealTodayTest" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 28m 31s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HCPRegisterTest - 2018.06.05 at 18h 03m 45s.xml">
-      <configuration name="HCPRegisterTest" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 33m 12s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HCPRegisterTest - 2018.06.05 at 18h 05m 51s.xml">
-      <configuration name="HCPRegisterTest" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 35m 31s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__optifast_src_test_resources_testng_xml - 2018.06.06 at 13h 29m 10s.xml">
-      <configuration name="D:/optifast/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 36m 31s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__optifast_src_test_resources_testng_xml - 2018.06.06 at 13h 46m 36s.xml">
-      <configuration name="D:/optifast/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 38m 22s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RegisterUsedEmailTest - 2018.06.06 at 14h 06m 55s.xml">
-      <configuration name="RegisterUsedEmailTest" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 47m 14s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RegisterUsedEmailTest - 2018.06.06 at 14h 08m 12s.xml">
-      <configuration name="RegisterUsedEmailTest" configurationId="TestNG" />
+    <history-entry file="RegisterTest - 2018.06.22 at 15h 50m 09s.xml">
+      <configuration name="RegisterTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -616,19 +612,19 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2468017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24946696" />
       <window_info anchor="bottom" id="Statistic" order="7" weight="0.32936078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24618736" />
+      <window_info anchor="right" id="Properties" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Properties" order="3" />
+      <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
@@ -639,7 +635,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -905,20 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/LoginPageObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/HomepageObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/LoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -933,19 +915,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BasePageObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#1623#1624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/HCPRegisterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
+        <state relative-caret-position="748">
           <caret line="50" column="28" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="28" />
         </state>
       </provider>
@@ -957,16 +929,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/HCPRegisterPageObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/MailinatorPageObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
+        <state relative-caret-position="510">
           <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
         </state>
       </provider>
@@ -978,17 +943,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/RegisterTest.java">
+    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="61" column="8" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="30" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BaseTest.java">
+    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/base/BasePageObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="179">
+          <caret line="159" column="18" selection-start-line="159" selection-start-column="18" selection-end-line="159" selection-end-column="18" />
+          <folding>
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1623#1624#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -996,6 +965,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/HCPRegisterPageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/HomepageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../optifast/src/main/java/com/opt/pages/LoginPageObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../optifast/src/test/java/RegisterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="80" column="90" selection-start-line="80" selection-start-column="90" selection-end-line="80" selection-end-column="90" />
         </state>
       </provider>
     </entry>
