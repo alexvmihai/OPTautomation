@@ -27,8 +27,9 @@ public class RegisterTest extends BaseTest{
         //Generate random phone
         long number = (long)Math.floor(Math.random() * 9.0E9D) + 1000000000L;
         String phone = Long.toString(number);
+        String parola = "Optifast123/";
 
-        registerPage.fillRegisterForm("Alex","Automation",email, "Street 256", "Darkwood", "2454", "Optifast123/", "Parola123/",
+        registerPage.fillRegisterForm("Alex","Automation",email, "Street 256", "Darkwood", "2454", parola, parola,
                 "Australia", "New South Wales");
 
         registerPage.agreeTerms();
@@ -49,7 +50,7 @@ public class RegisterTest extends BaseTest{
         String expectedBlock = "Your registration has been received!";
         Assert.assertTrue(actualBlock.equals(expectedBlock), "Block  text doesn't match. \nExpected: " + expectedBlock + "\nActual: " + actualBlock);
         System.out.println("*******Block text matches !*******\n" + expectedBlock);
-        System.out.println("Your account is " + email + " Password: Parola123/");
+        System.out.println("Your account is " + email + " Password: " + parola);
 
         //Activate the account from the email
         Thread.sleep(3000);
@@ -77,13 +78,13 @@ public class RegisterTest extends BaseTest{
 //        String actualMessage = loginPage.getSuccessMessageNewAccount();
 //        System.out.println(actualMessage);
 //        Assert.assertTrue(actualMessage.equals(expectedMessage), "Register message does not match ! \nExpected: " + expectedMessage + "\nActual: " + actualMessage);
-            loginPage.fillInCredentials(email, "Parola123/");
+            loginPage.fillInCredentials(email, parola);
             CreateProgramPageObject programPage2 = loginPage.clickLoginButtonNewAccount();
         }
 
 
         if(driver.getPageSource().contains("your password has expired")){
-            programPage.resetPass("Parola123/", "Parola1234/", "Parola1234/");
+            programPage.resetPass(parola, "Parola1234/", "Parola1234/");
             AccountDashboardPageObject dashboard = programPage.submitNewPass();
             dashboard.waitForDashboardPageToLoad();
             System.out.println("Password has been reset, dashboard loaded successfully ! \nNew password is: Parola1234/");
