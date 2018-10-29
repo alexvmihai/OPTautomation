@@ -27,8 +27,8 @@ public class AboutMePageObject extends BasePageObject<AboutMePageObject> {
     private By pregnantF = By.xpath("html/body/div[2]/div[2]/div/div/div[1]/form/div[3]/div/div[2]/label[3]");
     private By diabetesF = By.xpath("html/body/div[2]/div[2]/div/div/div[1]/form/div[3]/div/div[2]/label[2]");
 
-    private By proceedButton = By.xpath("html/body/div[8]/div[2]/div/button[2]");
-    private By precautionButton = By.xpath("html/body/div[8]/div[2]/div/button[2]");
+    private By proceedButton = By.cssSelector("div.buttons-set:nth-child(3) > button:nth-child(2)");
+    private By precautionButton = By.cssSelector("div.buttons-set:nth-child(3) > button:nth-child(2)");
 
 
     public AboutMePageObject(WebDriver driver) throws IOException {
