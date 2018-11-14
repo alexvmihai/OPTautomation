@@ -17,8 +17,8 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
     private By header = By.cssSelector("#identifierId");
     private By goButton = By.cssSelector(".btn.btn-dark");
     private By emailSubject = By.xpath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div/div[6]/div/div[1]/div[2]/div/table/tbody/tr[1]/td[6]/div/div/div/span/span");
-    private By clickToActivate = By.xpath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr[5]/td/span/a/span");
-
+    private By clickToActivatePROD = By.xpath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr[3]/td/span/a/span");
+    private By clickToActivatePPRD = By.xpath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[3]/table/tbody/tr/td/table/tbody/tr[5]/td/span/a");
     private By resetPass = By.cssSelector("body > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)");
     private By emailF = By.cssSelector("#identifierId");
     private By next1B = By.cssSelector("#identifierNext > content:nth-child(3) > span:nth-child(1)");
@@ -83,9 +83,13 @@ public class MailinatorPageObject extends BasePageObject<MailinatorPageObject> {
         waitForVisibilityOf(composeB);
         waitForVisibilityOf(searchBox);
         clickOn(emailSubject);
-        Thread.sleep(4000);
+        Thread.sleep(8000);
 //        driver.switchTo().frame("msg_body");
-        clickOn(clickToActivate);
+        if(setEnv() == "PPRD"){
+            clickOn(clickToActivatePPRD);
+        } else {
+            clickOn(clickToActivatePROD);
+        }
 //        driver.switchTo().defaultContent();
         System.out.println("Account activated !");
         return new CreateProgramPageObject(driver);
